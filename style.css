@@ -1576,3 +1576,23 @@ body {
   user-select: none;
   transition: transform 0.2s ease;
 }
+.music-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+}
+
+#music-btn {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#music-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
