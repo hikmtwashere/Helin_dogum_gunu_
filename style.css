@@ -1576,25 +1576,4 @@ body {
   user-select: none;
   transition: transform 0.2s ease;
 }
-.music-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 9999;
-    display: none;
-}
-
-#music-btn {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#music-btn:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
 
