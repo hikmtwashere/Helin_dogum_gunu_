@@ -709,17 +709,35 @@
         
         candlesLit = 0;
     }
-    const music = document.getElementById('birthday-music');
-const musicBtn = document.getElementById('music-btn');
+    // Müzik kontrol butonu
+const music = document.getElementById("birthday-music");
+const musicBtn = document.getElementById("music-btn");
+const musicToggle = document.getElementById("music-toggle");
+let musicStarted = false;
 
-musicBtn.addEventListener('click', function () {
+// Sayfa yüklendiğinde butonu göster
+window.addEventListener("load", () => {
+    musicToggle.style.display = "block";
+});
+
+// İlk tıklamada müziği başlat
+document.addEventListener("click", () => {
+    if (!musicStarted) {
+        music.play().catch(e => console.warn("Müzik hatası:", e));
+        musicStarted = true;
+    }
+});
+
+// Butona basınca durdur/başlat
+musicBtn.addEventListener("click", () => {
     if (music.paused) {
         music.play();
-        musicBtn.textContent = '⏸️';
+        musicBtn.textContent = "⏸️";
     } else {
         music.pause();
-        musicBtn.textContent = '▶️';
+        musicBtn.textContent = "▶️";
     }
+});
 });
 </script>
 
